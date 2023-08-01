@@ -21,7 +21,6 @@ payload = {
 getinfo = getINFO(payload)
 if len(getinfo["result"]) > 0:
     citizen = getinfo["result"]['citizen']
-    id = citizen['id']
     jshir = citizen['pPinpp']
     surename = citizen['pPatronym']
     firstname = citizen['pName']
@@ -29,7 +28,6 @@ if len(getinfo["result"]) > 0:
     sex = citizen['pSex']
     jins = "ERKAK" if sex  else "AYOL"
     print(f"""
-          ID: {id}
           JSHIR: {jshir}
           PASPORT SERIYA RAQAMI: {pseria}
           
